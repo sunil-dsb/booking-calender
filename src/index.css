@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-primary: #be83bf;
+  --color-secondary: #EBE4EB;
+  --white: #fff;
+  --dark : #3D2F4B;
+  --gray : #3D2F4B;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../src/assets/fonts/HelveticaNeueBlack.woff2") format("woff2");
+}
+
+body {
+  background-color: #be83bf;
+}
+
+.left-panel-font {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.right-panel-font {
+  font-family: 'Inter', sans-serif;
+}
