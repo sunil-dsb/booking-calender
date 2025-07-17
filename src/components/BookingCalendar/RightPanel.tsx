@@ -48,7 +48,7 @@ const RightPanel = () => {
 
         {/* Total */}
         <div className="grid grid-cols-2 gap-4 border border-[var(--color-secondary)] rounded">
-          <div className="p-2 text-center text-md font-medium text-[var(--dark)]">
+          <div className="p-2 text-center text-md font-medium text-[var(--dark)] flex items-center justify-center">
             Select Dates To
             <br />
             See Total Cost
