@@ -2,6 +2,7 @@
 # 📅 Booking Calendar – React + TypeScript + Vite
 
 A modular and responsive **booking calendar** built with modern tools like React 19, TypeScript, Vite, and Tailwind CSS. Designed for date selection with pricing logic, and static disabled dates.
+Deployed app link  - https://booking-calender-eight.vercel.app
 
 ---
 
