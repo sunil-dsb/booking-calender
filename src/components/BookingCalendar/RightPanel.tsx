@@ -1,5 +1,5 @@
 import { useCalendar } from "../../hooks/useCalender";
-import { DAYS_OF_WEEK, MONTH, YEAR } from "./calendar.config";
+import { DAYS_OF_WEEK, MONTH, YEAR } from "../../config/calendar.config";
 import CalendarGrid from "./CalendarGrid";
 
 const RightPanel = () => {

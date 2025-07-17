@@ -1,4 +1,4 @@
-import BookingCalendar from "./components/BookingCalendar/BookingCalender"
+import BookingCalendar from "./components/BookingCalendar/BookingCalendar"
 
 function App() {
 

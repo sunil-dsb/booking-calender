@@ -1,60 +1,114 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📅 Booking Calendar – React + TypeScript + Vite
 
-Currently, two official plugins are available:
+A modular and responsive **booking calendar** built with modern tools like React 19, TypeScript, Vite, and Tailwind CSS. Designed for date selection with pricing logic, and static disabled dates.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tool               | Description                       |
+|--------------------|-----------------------------------|
+| React 19           | UI library                        |
+| TypeScript         | Static type checker               |
+| Vite               | Fast development/build tooling    |
+| Tailwind CSS       | Utility-first CSS framework       |
+| ESLint             | Code quality and formatting       |
 
-```js
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/               # Reusable UI components
+│   └── BookingCalendar/
+                └── BookingCalendar
+                └── CalenderGrid
+                └── LeftPanel
+                └── RightPanel
+├── hooks/
+│   └── useCalendar.ts        # Custom hook
+├── config/
+│   └── calendar.config.ts    # Static config values
+├── types/
+│   └── index.ts              # Shared type definitions
+├── App.tsx
+├── main.tsx
+```
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/sunil-dsb/booking-calender.git
+cd booking-calendar
+npm install
+npm run dev
+```
+
+> Open [http://localhost:5173](http://localhost:5173) in your browser
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+> Output will be generated in `dist/`
+
+---
+
+## 📐 Linting
+
+```bash
+npm run lint
+```
+
+## 📘 ESLint Setup
+
+This project uses [`@eslint/js`](https://www.npmjs.com/package/@eslint/js) for core rules and React lint plugins.
+
+To expand ESLint with **type-aware** rules in production, use the config below:
+
+```ts
+// eslint.config.js
 export default tseslint.config([
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
       ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
       ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
       ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
-])
+]);
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+For React-specific rules, you can install:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [`eslint-plugin-react-x`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
+- [`eslint-plugin-react-dom`](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
+
+```ts
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default tseslint.config([
-  globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-      // Enable lint rules for React
       reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
@@ -62,8 +116,17 @@ export default tseslint.config([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
     },
   },
-])
+]);
 ```
+
+## 🧾 License
+
+MIT
+
+---
+
+## 👤 Author
+
+Developed by [Sunil Negi](https://github.com/sunil-dsb)

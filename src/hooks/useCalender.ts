@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { DISABLED_DATES, HARDCODED_PRICES, MONTH, SELECTEDDATES, YEAR } from "../components/BookingCalendar/calendar.config";
+import { DISABLED_DATES, HARDCODED_PRICES, MONTH, SELECTEDDATES, YEAR } from "../config/calendar.config";
 import type { DatePrice } from "../types";
 
 
